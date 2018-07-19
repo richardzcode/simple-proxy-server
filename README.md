@@ -24,5 +24,5 @@ node app.js --target $target_endpoint$ --header Content-Type application/json
 
 Add Response Headers
 ```
-node app.js --target $target_endpoint$ --response_headerAccess-Control-Allow-Origin '*' -H Access-Control-Allow-Methods 'POST, GET, OPTIONS'
+node app.js --target $target_endpoint$ --response_header Access-Control-Allow-Origin '*' -H Access-Control-Allow-Methods 'POST, GET, OPTIONS'
 ```
