@@ -1,0 +1,23 @@
+{
+  "name": "proxy-test",
+  "version": "0.0.1",
+  "description": "Simply ready to work proxy server base on nodejs http-proxy",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardzcode/simple-proxy-server.git"
+  },
+  "keywords": [
+    "proxy",
+    "server"
+  ],
+  "author": "Richard Zhang <richardzcode@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http-proxy": "^1.17.0",
+    "yargs": "^12.0.1"
+  }
+}
