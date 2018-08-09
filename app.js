@@ -49,6 +49,14 @@ proxy.on('proxyRes', function(proxyRes, req, res) {
   response_headers.forEach(header => {
     res.setHeader(header.name, header.value);
   });
+
+  var location = proxyRes.headers['location'];
+  if (location && location.startsWith(argv.target)) {
+    var location = location.replace(argv.target, 'http://localhost:' + argv.port);
+    console.log('replaced with ' + location);
+    proxyRes.headers['location'] = location;
+    res.setHeader('location', location);
+  }
 });
 
 console.log('proxy server running on localhost port ' + argv.port);
